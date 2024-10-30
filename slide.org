@@ -1,0 +1,179 @@
+#+title: 東海とPythonと私
+#+subtitle: PyCon mini 東海
+#+author: 小田切篤
+#+date: 2024-11-16
+#+BEAMER_THEME: Boadilla
+#+BEAMER_COLOR_THEME: seahorse
+#+OPTIONS: H:2 toc:t num:t
+#+OPTIONS: ^:{}
+#+LaTeX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [aspectratio=169]
+#+LaTeX_HEADER: \usepackage{luatexja}
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col)
+
+* 東海とPythonと私
+** お前誰よ
+*** bio
+:PROPERTIES:
+:BEAEMER_COL: 0.48
+:BEAMER_ENV: block
+:END:
+   - Atsushi Odagiri
+   - 2000年〜2004年 豊橋技術科学大学
+   - 2005年 名古屋で就職
+   - 2016年〜 Open Collector
+   - Pythonは1.5くらいのころから
+
+*** 
+:PROPERTIES:
+:BEAEMER_COL: 0.48
+:BEAMER_ENV: block
+:END:
+
+#+ATTR_LATEX: :width 2cm
+[[./r-penta512.png]]
+
+#+ATTR_LATEX: :width 2cm
+[[./oc-logo.png]]
+#+ATTR_LATEX: :width 2cm
+[[./logo-w.png]]
+
+** オープンコレクター/ケンオール
+
+* 私とPython
+
+** Pythonとの出会い How To Become A Hacker
+- [[http://www.catb.org/~esr/faqs/hacker-howto.html][How To Become A Hacker]]
+- [[https://cruel.org/freeware/hacker.html][和訳]]
+
+#+begin_quote
+If you don't know any computer languages, I recommend starting with Python.
+#+end_quote
+
+** Pythonとの出会い Zope
+
+- JAPAN Zope Users Group (JZUG)
+  - Nagoya Zope Users Group (NZUG) エンジニアコミュニティに初参加
+- なにかを開催した記憶
+
+** Pythonとコミュニティ
+
+- Python Developers Camp 2006 富士
+  - https://aodag.hatenadiary.org/entry/20061002/1159796751
+- 2006年12月 Python Workshop04にかこつけて名古屋でPython忘年会
+  - 関西、福島、北海道も同時開催して5箇所同時に乾杯など
+- [[https://web.archive.org/web/20070220090759/http://www.python.jp/Zope/PyLog//1169034548/][Python Developers Camp 2007 Winter 志賀高原]]
+  - https://gihyo.jp/dev/serial/01/2007oss/0013
+
+* 東海でのPython
+
+** 2007年 東海 Python Workshop 01
+
+- 継続するには地方コミュニティで話せる人を増やさなくては...
+- https://web.archive.org/web/20101231044139/https://www.python.jp/Zope/workshop/200705/
+- https://www.daemonfreaks.com/blog/2007/May/27
+
+** Python東海
+
+- 2008年からだったと思う
+- わりとすぐに東京に行くことになったので主催をおねがいする
+  - 主催はどんどん変っていいっていう前例になったかも
+
+** 最近
+- ちらちらと関わる
+  - https://pyconjp.blogspot.com/2017/08/python-boot-camp-in-aichi.html
+
+* Pythonパッケージング
+
+** パッケージングエコシステム/始まり
+
+*** ~setuptools~ と ~egg~ と ~cheeseshop~ と
+
+*** setuptools
+*** egg
+*** cheeseshop
+
+** 標準ライブラリを強化する試み
+
+- ~setuptools~, ~distribute~ は外部ライブラリ
+
+** distutils2への挑戦
+
+- https://pypi.org/project/Distutils2/
+- https://wiki.python.org/moin/Distutils2
+
+** METADATA 2.0
+
+- [[https://peps.python.org/pep-0426/][PEP 426 – Metadata for Python Software Packages 2.0]]
+- [[https://peps.python.org/pep-0459/][PEP 459 – Standard Metadata Extensions for Python Software Packages]]
+
+** PyPAリポジトリ
+
+- setuptoolsとdistributeのコードベースを統合
+- pip, virtualenv, setuptools を一括して管理するリポジトリ
+
+** インストールして使う
+
+** Simple Repository
+
+- パッケージを配布する仕組み
+- 要はPyPI
+
+** Simple Repository関連PEP
+- [[https://peps.python.org/pep-0503/][PEP 503 – Simple Repository API]]
+- [[https://peps.python.org/pep-0592/][PEP 592 – Adding “Yank” Support to the Simple API]]
+- [[https://peps.python.org/pep-0629/][PEP 629 – Versioning PyPI’s Simple API]]
+- [[https://peps.python.org/pep-0658/][PEP 658 – Serve Distribution Metadata in the Simple Repository API]]
+- [[https://peps.python.org/pep-0691/][PEP 691 – JSON-based Simple API for Python Package Indexes]]
+- [[https://peps.python.org/pep-0700/][PEP 700 – Additional Fields for the Simple API for Package Indexes]]
+- [[https://peps.python.org/pep-0714/][PEP 714 – Rename dist-info-metadata in the Simple API]]
+
+** インストール関連PEP
+
+- [[https://peps.python.org/pep-0376/][PEP 376 – Database of Installed Python Distributions]]
+  - [[https://peps.python.org/pep-0262/][PEP 262 – A Database of Installed Python Packages]] Rejected
+- [[https://peps.python.org/pep-0405/][PEP 405 – Python Virtual Environments]]
+- [[https://peps.python.org/pep-0668/][PEP 668 – Marking Python base environments as “externally managed”]]
+
+*** 策定中のPEP
+
+- [[https://peps.python.org/pep-0480/][PEP 480 – Surviving a Compromise of PyPI: End-to-end signing of packages]]
+  - [[https://peps.python.org/pep-0458/][PEP 458 – Secure PyPI downloads with signed repository metadata]]
+- [[https://peps.python.org/pep-0710/][PEP 710 – Recording the provenance of installed packages]]
+- [[https://peps.python.org/pep-0751/][PEP 751 – A file format to list Python dependencies for installation reproducibility]]
+- [[https://peps.python.org/pep-0752/][PEP 752 – Implicit namespaces for package repositories]]
+- [[https://peps.python.org/pep-0755/][PEP 755 – Implicit namespace policy for PyPI]]
+- [[https://peps.python.org/pep-0759/][PEP 759 – External Wheel Hosting]]
+- [[https://peps.python.org/pep-0763/][PEP 763 – Limiting deletions on PyPI]]
+- [[https://peps.python.org/pep-0777/][PEP 777 – How to Re-invent the Wheel]]
+
+** パッケージングして配布する
+
+** Metadata関連PEP
+
+- [[https://peps.python.org/pep-0241/][PEP 241 – Metadata for Python Software Packages]]
+- [[https://peps.python.org/pep-0314/][PEP 314 – Metadata for Python Software Packages 1.1]]
+- [[https://peps.python.org/pep-0345/][PEP 345 – Metadata for Python Software Packages 1.2]]
+- [[https://peps.python.org/pep-0566/][PEP 566 – Metadata for Python Software Packages 2.1]]
+- [[https://peps.python.org/pep-0621/][PEP 621 – Storing project metadata in pyproject.toml]]
+
+** 配布物のファイルフォーマット
+
+- [[https://peps.python.org/pep-0427/][PEP 427 – The Wheel Binary Package Format 1.0]]
+- [[https://peps.python.org/pep-0491/][PEP 491 – The Wheel Binary Package Format 1.9]] deferred
+- [[https://peps.python.org/pep-0518/][PEP 518 – Specifying Minimum Build System Requirements for Python Projects]]
+- [[https://peps.python.org/pep-0625/][PEP 625 – Filename of a Source Distribution]]
+
+** ビルド
+
+- [[https://peps.python.org/pep-0517/][PEP 517 – A build-system independent format for source trees]]
+- [[https://peps.python.org/pep-0694/][PEP 694 – Upload 2.0 API for Python Package Repositories]]
+
+** PEP517 wheelビルドフロー
+
+- ビルド専用のvenvを作成
+- 作成されたvenvに ~build-system.requires~ に列挙されているパッケージをインストール
+- venv内で ~build-system.build-backend~ で指定されているモジュールをimport
+- ~build-backend~ の ~build_wheel~ を呼ぶ
+
+* まとめ

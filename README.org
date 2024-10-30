@@ -1,0 +1,9 @@
+#+title: PyCon mini 東海
+#+author: 小田切篤
+#+language: ja
+
+* 概要
+
+- https://tokai.pycon.jp/2024/
+- 2024-11-16
+- 愛知県名古屋市中区栄4-1-1 中日ビル6F

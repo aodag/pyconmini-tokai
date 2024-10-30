@@ -1,0 +1,11 @@
+*.log
+*.aux
+*.out
+*.nav
+*.toc
+*.snm
+*.vrb
+.venv
+tmp
+.direnv
+.envrc
